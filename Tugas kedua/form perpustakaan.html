@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anggota Perpustakaan</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <style>
+    
+        body {
+            background: url(tokyofrift.jpg) no-repeat fixed;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+    .container {
+        position: relative;
+        max-width: 900px;
+        width: 100%;
+        border: 2px dashed white;
+        background-color:  transparent;
+        backdrop-filter: blur(8px);
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+        color: rgb(255, 255, 255);
+        padding: 60px;
+        border-radius: 40px;
+    }
+
+        .container header {
+            font-size: 1rem;
+            color: white;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 15px;
+            border-bottom: 2px dashed white;
+        }
+
+    .form .input-box {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .input-box h3 {
+        color: white;
+    }
+
+        .input input,
+        .input select {
+            color: black;
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid rgba(128, 128, 128, 0.6); 
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.8); 
+            font-size: 1rem;
+        }
+
+    .input select {
+        color: black;
+    }
+
+    .input option {
+        color: black;
+    }
+
+        .kolom button {
+            color: black;
+            width: 85px;
+            padding: 5px;
+            border: 1px solid white; 
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.8);
+            cursor: pointer;
+        }
+
+        .form .kolom {
+            display: flex;
+            column-gap: 7px;
+            justify-content: center;
+            height: 25px;
+            margin-top: 15px;
+        }
+
+        .form .gender {
+            margin-top: 15px;
+        }
+
+        .gender .gender-opsi {
+            display: flex;
+            column-gap: 10px;
+        }
+
+        .gender .gender-opsi .wkwk label {
+            color: white;
+        }
+
+@media screen and (max-width: 500px) {
+    .form .kolom {
+        flex-wrap: wrap;
+    }
+}
+
+  </style>
+  <body>
+    <body></body>
+    <div class="container">
+        <header><h2>Formulir Anggota Perpustakaan</h2></header>
+        <form class="form" action="#">
+            <div class="input-box"> 
+                <h3>Nama</h3>
+                <div class="input">
+                <input type="text" placeholder="Masukan Nama">
+                </div>
+            </div>
+            <div class="input-box"> 
+                <h3>Kota Lahir</h3>
+                <div class="input">
+                <input type="text" placeholder="Masukan kota/pilih kota lahir" list="kota_lahir" name="kota" id="kota">
+                <datalist id="kota_lahir">
+                <option value="Semarang">Semarang</option>
+                <option value="Jakarta">Jakarta</option>
+                <option value="Bali">Solo</option>
+                <option value="Tegal">Demak</option>
+                <option value="Yogyakarta">Medan</option>
+                </datalist>
+                </div> 
+            </div>
+            <div class="input-box"> 
+                <h3>Tanggal Lahir</h3>
+                <div class="input">
+                <input type="date" required>
+                </div>
+            </div>
+        <div class="gender"> 
+            <h3>Gender</h3>
+        <div class="gender-opsi">
+            <div class="wkwk">
+                <input type="radio" id="pria" name="gender" >
+                <label for="pria">Pria</label>
+            </div>
+                <div class="wkwk">
+                    <input type="radio" id="wanita" name="gender" >
+                    <label for="wanita">Wanita</label>
+                </div>
+            </div>
+        </div>
+            <div class="input-box"> 
+                <h3>No. Telepon</h3>
+                <div class="input">
+                <input type="number" placeholder="Masukan Nomor Telp" required>
+                </div>
+            </div>
+            <div class="input-box">
+                <h3>Musik Favorit</h3>
+                <input type="checkbox" name="Musik Favorit" value="Nasi Goreng">Funk
+                <input type="checkbox" name="Musik Favorit" value="Mie Goreng">Punk
+                <input type="checkbox" name="Musik Favorit" value="Mie Goreng">Rock
+                <input type="checkbox" name="Musik Favorit" value="Mie Goreng">Pop
+            </div>
+            <div class="input-box"> 
+                <h3>Agama</h3>
+                <div class="input">
+                <select name="pilih">
+                    <div class="input">
+                 <option value="Islam">Islam</option>
+                    <option value="Katholik">Katholik</option>   
+                    <option value="Kristen">Kristen</option>
+                    <option value="Hindu">Hindu</option>
+                    <option value="Buddha">Buddha</option>
+                    <option value="Konghuchu">Konghuchu</option>
+                    </div>
+                </select>
+                </div>
+            </div>
+            <div class="input-box alamat"> 
+                <h3>Alamat</h3>
+                <div class="input">
+                <input type="text" placeholder="Masukan Alamat">
+                </div>
+            </div>
+            <div class="kolom">
+                <button type="button" onclick="this.form.reset()">Clear</button>
+                <button>Send</button>
+            </div>
+        </form>
+    </div>
+ </body>
+</html>
+
